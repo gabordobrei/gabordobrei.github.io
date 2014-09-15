@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="img/favicon.ico">
+
+		<link href='http://fonts.googleapis.com/css?family=Oswald|Roboto|Julius+Sans+One' rel='stylesheet' type='text/css'>
+		
+		<title>Döbrei Gábor</title>
+
+		<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/style.css" rel="stylesheet">
+		
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyCH6JedYImsQHS082dDkswDiLLqsDtbQ&sensor=false"></script>
+		<script type="text/javascript">
+		
+			function initialize() {
+				var myLatlng = new google.maps.LatLng(47.4725369, 19.0595921);
+				
+				var mapOptions = {
+					center: myLatlng,
+					zoom: 15
+				};
+				var map = new google.maps.Map(document.getElementById("map-canvas"),
+						mapOptions);
+						
+				// To add the marker to the map, use the 'map' property
+				marker = new google.maps.Marker({
+					map:map,
+					animation: google.maps.Animation.DROP,
+					position: myLatlng
+				});
+				google.maps.event.addListener(marker, 'click', toggleBounce);
+			}
+			
+			function toggleBounce() {
+				if (marker.getAnimation() != null) {
+					marker.setAnimation(null);
+				} else {
+					marker.setAnimation(google.maps.Animation.BOUNCE);
+				}
+			}
+			
+			google.maps.event.addDomListener(window, 'load', initialize);
+			
+		</script>
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>	
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+		<header>
+			<nav id="navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
+					<!--div class="container"-->
+						<div id="left-nav" class="navbar-header page-scroll">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+							<a id="logo" class="navbar-brand" href="#top">DG</a>
+							
+							<p id="name" class="navbar-text">Döbrei Gábor</p>
+						</div>
+						
+						<div id="right-nav" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li class="page-scroll"><a href="#top"></a></li>
+								<li class="page-scroll"><a href="#about">Rólam</a></li>
+								<li class="page-scroll"><a href="#cv">CV</a></li>
+								<li class="page-scroll"><a href="#contact">Kapcsolat</a></li>
+							</ul>
+						</div><!--/.nav-collapse -->
+					<!--/div-->
+			</nav>
+		</header>
+
+		<section id="top" class="top-section content-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<h1>Döbrei Gábor</h1>
+						<h2>Szoftverfejlesztő</h2>
+					</div>
+					
+					<div class="col-md-5">
+						<img src="img/profile.jpg" class="img-responsive img-circle" alt="Responsive image"></img>
+					</div>
+				</div>
+				
+			</div>
+			<div class="page-scroll page-scroll-arrow"><a href="#about"><span class="arrow glyphicon glyphicon-chevron-down"></span></a></div>
+		</section>
+				
+		<section id="about" class="about-section content-section">
+			<div class="container">
+				<h1>Rólam</h1>
+				<hr></hr>
+				
+				<div id="bio" class="row">
+					<div class="col-md-12">
+						<p>2012-ben szereztem meg a BSc fokozatot a <a href="http://www.bme.hu/" target="_blank"> BME</a>-n, a <a href="http://www.tmit.bme.hu/" target="_blank"> Távközlési és Médiainformatikai Tanszéken</a>, <a href="https://diplomaterv.vik.bme.hu/hu/Theses/Grafbeagyazasi-technikak-kommunikacios" target="_blank"> diplomámat</a> az Internet tartományszintű gráfjának hiperbolikus térbe ágyazásának lehetőségeiről írtam. Jelenleg ugyanitt vagyok az MSc képzésen is, főbb érdeklődési területeim: algoritmusok, routing, trend terjedés, adatbányászat.</p>
+						
+						<p>Házas vagyok, Újpesten élek. Az egyetem mellett dolgozom, szabad időmben webfejlesztéssel, programozással foglalkozom.</p>
+					</div>
+				</div>
+				
+				<div id="skill" class="row">
+					<div class="col-md-12">
+						<h4>Amihez értek</h4>
+					</div>
+					
+					<div class="col-md-4">
+						<span>Algoritmusok</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="85%"></div>
+						</div>
+												
+						<span>LaTeX</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="60%"></div>
+						</div>
+						
+						<span>JavaScript</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="65%"></div>
+						</div>
+															
+						<span>Java</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="85%"></div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<span>Git</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="80%"></div>
+						</div>
+												
+						<span>C++</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="65%"></div>
+						</div>
+						
+						<span>Linux</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="70%"></div>
+						</div>
+															
+						<span>Android</span>
+						<div class="progress">
+							<div id="bs" class="progress-bar" style="width: 0%;" data-percentage="75%"></div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<span>Eclipse</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="80%"></div>
+						</div>
+												
+						<span>PHP</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="75%"></div>
+						</div>
+						
+						<span>SQL</span>
+						<div class="progress">
+							<div class="progress-bar" style="width: 0%;" data-percentage="80%"></div>
+						</div>
+															
+						<span>Scrum / Agilis szoftverfejlesztés</span>
+						<div class="progress">
+							<div id="bs" class="progress-bar" style="width: 0%;" data-percentage="70%"></div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="page-scroll page-scroll-arrow"><a href="#cv"><span class="arrow glyphicon glyphicon-chevron-down"></span></a></div>
+		</section>
+		
+		<section class="parallax">
+			<div class="parallax-content">
+				<p class="quote"> God does not play dice.</p>
+				<p class="quote-author"> Albert Einstein </p>
+			</div>
+		</section>
+		
+		<section id="cv" class="cv-section content-section">
+			<div class="container">
+				<h1>Curriculum Vitae</h1>
+				<hr></hr>
+				
+				<div class="row">
+					<div class="col-md-offset-1 col-md-5">
+						
+						<div class="cv-title-experience">
+							<h2>Tapasztalat</h2>
+						</div>
+						
+						<div class="cv-panel">
+							<div class="cv-header cv-nextent">
+								<span class="cv-icon-open glyphicon glyphicon-refresh" data-rotation="1"></span>
+							</div>
+							
+							<div class="cv-body">
+								<h4>Szoftverfejlesztő</h4>
+								<hr></hr>
+								2014 augusztusától dolgozom a Nextent Informatika Zrt. Innovációs csapatában. A legkülönfélébb ötleteinket valósítjuk meg legfőképp android alapon.
+							</div>
+						</div>
+						<div class="cv-panel">
+							<div class="cv-header cv-bme">
+								<span class="cv-icon-open glyphicon glyphicon-refresh" data-rotation="1"></span>
+							</div>
+							
+							<div class="cv-body">
+								<h4>Kutató</h4>
+								<hr></hr>
+								2013 őszétől majd egy éven keresztül dolgoztam kutatóként a BME TMIT Lendület csoportjában. Foglalkoztam útvonalválasztó algoritmusok kidolgozásával, trendterjedés vizsgálatával, az SDN-nel (OpenFlow-val), illetve egy klimatológiával foglalkozó kutatást támogattam adatbányászati eszközökkel.
+							</div>
+						</div>
+						<div class="cv-panel">
+							<div class="cv-header cv-bme cv-bme-1">
+								<span class="cv-icon-open glyphicon glyphicon-refresh" data-rotation="1"></span>
+							</div>
+							
+							<div class="cv-body">
+								<h4>Külső óraadó, gyakorlatvezető</h4>
+								<hr></hr>
+								2010 őszétől, ahogy időm engedi - szinte minden félévben - külső munkatársként gyakorlatvezető vagyok a BME Matematika Intézetnél. Informatikusokat, műszaki menedzsereket tanítok függvény analízisre. Ezenkívül tanítottam algoritmuselméletet is a második évfolyamos informatikus hallgatóknak.
+							</div>
+						</div>
+						<div class="cv-panel">
+							<div class="cv-header cv-snt">
+								<span class="cv-icon-open glyphicon glyphicon-refresh" data-rotation="1"></span>
+							</div>
+							
+							<div class="cv-body">
+								<h4>Hálózati mérnök gyakornok, fejlesztő</h4>
+								<hr></hr>
+								2013 nyarán az S&T Consulting Hungary Kft-nél voltam gyakornok. Hálózati megoldások implementálásában segédkeztem, illetve saját szoftvertermékek fejlesztésén dolgoztam.
+							</div>
+						</div>
+						
+					</div>
+					<div class="col-md-5">
+					
+						<div class="cv-title-edu">
+							<h2>Tanulmányok</h2>
+						</div>				
+					
+						<div class="cv-panel">
+							<div class="cv-header cv-bme">
+								<span class="cv-icon-open glyphicon glyphicon-refresh" data-rotation="1"></span>
+							</div>
+							
+							<div class="cv-body">
+								<h4>Budapesti Műszaki és Gazdaságtudományi Egyetem</h4>
+								<h5>Távközlési és Médiainformatikai Tanszék</h5>
+								<h6>Hálózatok és Szolgáltatások szakirány</h6>
+								<hr></hr>
+								2013-2015. Diplomamunkám címe: Szabály alapú útvonalépítési stratégiák nagy hálózatokban.
+							</div>
+						</div>
+						<div class="cv-panel">
+							<div class="cv-header cv-bme cv-bme-1">
+								<span class="cv-icon-open glyphicon glyphicon-refresh" data-rotation="1"></span>
+							</div>
+							
+							<div class="cv-body">
+								<h4>Budapesti Műszaki és Gazdaságtudományi Egyetem</h4>
+								<h5>Távközlési és Médiainformatikai Tanszék</h5>
+								<h6>Médiainformatika szakirány</h6>
+								<hr></hr>
+								2009 - 2013. Szakdolgozatom címe: <a href="https://diplomaterv.vik.bme.hu/hu/Theses/Grafbeagyazasi-technikak-kommunikacios" target="_blank">Gráf-beágyazási technikák kommunikációs hálózatokban.</a>
+							</div>
+						</div>
+						<div class="cv-panel">
+							<div class="cv-header cv-fazekas">
+								<span class="cv-icon-open glyphicon glyphicon-refresh" data-rotation="1"></span>
+							</div>
+							
+							<div class="cv-body">
+								<h4>Fazekas Mihály Fővárosi Gyakorló Általános Iskola és Gimnázium</h4>
+								<hr></hr>
+								2003 - 2009
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="row" style="margin-top: 40px;">
+					<div class="col-md-offset-1 col-md-5">
+						<div class="cv-title-schoolarship">
+							<h2>Ösztöndíjak</h2>
+						</div>
+						
+						<div class="cv-panel">
+							<div class="cv-header cv-morgan">
+								<span class="cv-icon-open glyphicon glyphicon-refresh" data-rotation="1"></span>
+							</div>
+							
+							<div class="cv-body">
+								<h4>Morgan Stanley scholarship</h4>
+								<hr></hr>
+								Egymás után négy féléven át nyertem el a Morgan Stanley Magyarország tehetséges egyetemistáknak kiírt pályázatát, melynek keretén belül informatika szakkört tarthattam középiskolásoknak a Fazekas Mihály és a Szent István gimnáziumokban. A szakkörök témája változatos volt: foglalkoztunk mikroprocesszor-programozással, algoritmusokkal és OpenGL-lel is.
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="col-md-5"></div>
+				</div>
+					
+			</div>
+			<div class="page-scroll page-scroll-arrow"><a href="#contact"><span class="arrow glyphicon glyphicon-chevron-down"></span></a></div>
+		</section>
+		
+		<section class="parallax">
+			<div class="parallax-wrapper">
+				<div class="parallax-content">
+					<p class="quote"> God may not play dice with the universe, but something strange is going on with the prime numbers.</p>
+					<p class="quote-author"> Erdős Pál </p>
+				</div>
+			</div>
+		</section>
+		
+		<section id="contact" class="contact-section content-section">
+			<div class="container">
+				<h1>Kapcsolat</h1>
+				<hr></hr>
+		
+				<div id="contact-form" class="row">
+					<div class="col-md-6">
+						<h2>Döbrei Gábor</h2>
+						<hr/>
+						<address>
+							<strong>Budapesti Műszaki és Gazdaságtudományi Egyetem</strong><br/>
+							<strong>Távközlési és Médiainformatikai Tanszék</strong><br/>
+							1117, Budapest, Magyar tudósok körútja 2.<br/>
+						</address>
+						 
+						
+						<p>I épület, IE318</p>
+						<hr/>
+						<p><b>Email:</b> <a href="mailto:gabordobrei+homepage@gmail.com">gabor.dobrei@gmail.com</a></p>
+						<p><b>Twitter:</b> <a href="https://twitter.com/gabor_dobrei" target="_blank">@gabor_dobrei</a></p>
+						<p><b>Facebook:</b> <a href="http://www.facebook.com/gabor.dobrei" target="_blank">gabor.dobrei</a></p>
+						<p><b>Google+:</b> <a href="https://plus.google.com/u/0/116859741368544657725/posts" target="_blank">Gábor+</a></p>
+						<p><a href="http://www.linkedin.com/pub/g%C3%A1bor-d%C3%B6brei/68/a43/230" target="_blank">LinkedIn</a></p>
+					</div>
+					
+					<div class="col-md-6">
+						<div class="img-responsive" id="map-canvas"></div>
+					</div>
+				</div>
+		
+		
+				<!--div class="row">
+					<div class="col-md-offset-2 col-md-8">
+						<div id="social">
+							<div id="google-link" class="contact-link">
+								<a  href="https://plus.google.com/u/0/116859741368544657725/posts" target="_blank"></a>
+							</div>
+							<div id="twitter-link" class="contact-link">
+								<a href="https://twitter.com/gabor_dobrei" target="_blank"></a>
+							</div>
+							<div id="facebook-link" class="contact-link">
+								<a href="http://www.facebook.com/gabor.dobrei" target="_blank"></a>
+							</div>
+							<div id="linkedin-link" class="contact-link">
+								<a href="http://www.linkedin.com/pub/g%C3%A1bor-d%C3%B6brei/68/a43/230" target="_blank"></a>
+							</div>
+							<div id="github-link" class="contact-link">
+								<a href="https://github.com/gabordobrei" target="_blank"></a>
+							</div>
+							<!-- a href="https://github.com/gabordobrei" target="_blank">stackoverflow</a - ->
+						</div>
+					</div>
+				</div -->
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				
+				<div class="footer-center">
+					©2014 Döbrei Gábor. Minden jog fenntartva!
+				</div>
+			</div>
+		</footer>
+		
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script src="//remysharp.com/downloads/jquery.inview.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/jquery.inview.js"></script>
+		<script>
+			!function(d,s,id){
+				var js, fjs=d.getElementsByTagName(s)[0], p=/^http:/.test(d.location)?'http':'https';
+				if(!d.getElementById(id)){
+					js = d.createElement(s);
+					js.id = id;
+					js.src = p+"://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js,fjs);
+				}
+			}
+		
+			(document,"script","twitter-wjs");
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-43080909-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>
