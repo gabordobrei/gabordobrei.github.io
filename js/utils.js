@@ -40,8 +40,6 @@ $(function() {
 		var clockwise = $icon.attr("data-rotation");
 
 		$icon.css({
-			"-webkit-transform": "rotate(" + (clockwise * 180) + "deg)",
-			"-ms-transform": "rotate(" + (clockwise * 180) + "deg)",
 			"transform": "rotate(" + (clockwise * 180) + "deg)"
 		});
 		$icon.attr("data-rotation", clockwise == 1 ? 0 : 1);
@@ -53,31 +51,3 @@ $(function() {
 	});
 	
 });
-
-(function($){
-	$.fn.parallax = function(options){
-		var $$ = $(this);
-		offset = $$.offset();
-		var defaults = {
-			"start": 0,
-			"stop": offset.top + $$.height(),
-			"coeff": 0.95
-		};
-		var opts = $.extend(defaults, options);
-		return this.each(function(){
-			$(window).bind("scroll", function() {
-				windowTop = $(window).scrollTop();
-				if((windowTop >= opts.start) && (windowTop <= opts.stop)) {
-					newCoord = windowTop * opts.coeff;
-					$$.css({
-						"background-position": "0 "+ newCoord + "px"
-					});
-				}
-			});
-		});
-	};
-})(jQuery);
-
-// call the plugin
-$(".parallax").parallax({ "coeff":-0.65 });
-$(".parallax-content").parallax({ "coeff":1.15 });

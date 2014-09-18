@@ -4,13 +4,9 @@ html, body {
 }
 
 body {
-	
 	background: url(../img/home.jpg) no-repeat center center;
 	background-size: 100% 100%;
 	background-attachment: fixed;
-	/*
-	background-color: black;
-	*/
 }
 
 
@@ -40,18 +36,14 @@ body {
 	background: black;
 	color: #e29839 !important;
 	
-	-webkit-transition-property: background, color; /* Safari */
-	-webkit-transition-duration: 0.5s; /* Safari */
-	-webkit-transition-timing-function: ease;
-	
-	transition-property: background, color;
-	transition-duration: 0.5s;
-	transition-timing-function: ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 #logo:hover {
-	padding-left: 10px;
-	padding-right: 10px;
 	background: #e29839;
 	color: white !important;
 }
@@ -60,21 +52,9 @@ body {
 	#logo {
 		padding-left: 60px;
 		padding-right: 60px;
-		background: black;
-		color: #e29839 !important;
-		
-		-webkit-transition-property: background, color; /* Safari */
-		-webkit-transition-duration: 0.5s; /* Safari */
-		-webkit-transition-timing-function: ease;
-		
-		transition-property: background, color;
-		transition-duration: 0.5s;
-		transition-timing-function: ease;
 	}
 	
 	#logo:hover {
-		padding-left: 60px;
-		padding-right: 60px;
 		background: #e29839;
 		color: white !important;
 	}
@@ -124,7 +104,6 @@ body {
 	text-align: center;
 	font-size: 250%;
 	color: white;
-	/* font-family: 'Julius Sans One', sans-serif; */
 	font-family: 'Oswald', Arial, Verdana;
 	text-transform: uppercase;
 	line-height: 1;
@@ -177,14 +156,11 @@ body {
 .content-section a {
 	color: #e29839;
 
-	-webkit-transition-property: color; /* Safari */
-	-webkit-transition-duration: 0.5s; /* Safari */
-	-webkit-transition-timing-function: ease;
-	
-	transition-property: color;
-	transition-duration: 0.5s;
-	transition-timing-function: ease;
-	
+	-moz-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	-ms-transition: color 0.5s ease;
+	-webkit-transition: color 0.5s ease;
+	transition: color 0.5s ease;
 }
 
 .content-section a:hover{
@@ -241,19 +217,6 @@ footer {
 	text-align: center;
 }
 
-.middot:before {
-	content: "·";
-}
-
-/*
-.arrow{
-	color: white;
-}
-
-.arrow:hover{
-	color: #e29839;
-}
-*/
 .arrow {
 	color: black;
 }
@@ -303,15 +266,13 @@ footer {
 	right: 5%;
 	margin-top: -7px;
 	color: white;
-	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
 	
-	-webkit-transition-property: -webkit-transform; /* Safari */
-	-webkit-transition-duration: 0.5s; /* Safari */
-	-webkit-transition-timing-function: ease;
-	
-	transition-property: -webkit-transform;
-	transition-duration: 0.5s;
-	transition-timing-function: ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 
@@ -356,55 +317,8 @@ footer {
 	margin-top: 15px;
 }
 
-#social {
-	text-align: center;
-}
-
-.contact-link {
-	height: 60px;
-	width: 60px;
-	margin: 2px;
-	float: left;
-	background-size: 100% auto;
-	background-color: black;
-	
-	-webkit-transition-property: background-color; /* Safari */
-	-webkit-transition-duration: 0.5s; /* Safari */
-	-webkit-transition-timing-function: ease;
-	
-	transition-property: background-color;
-	transition-duration: 0.5s;
-	transition-timing-function: ease;
-}
-
-.contact-link:hover {
-	background-color: #e29839;
-}
-
-#google-link {
-	background-image: url(../img/google.inverse.png);
-}
-
-#twitter-link {
-	background-image: url(../img/twitter.inverse.png);
-}
-#facebook-link {
-	background-image: url(../img/facebook.inverse.png);
-}
-#github-link {
-	background-image: url(../img/github.inverse.png);
-}
-#linkedin-link {
-	background-image: url(../img/linkedin.inverse.png);
-}
-
 #contact-form {
 	margin-top: 60px;
-}
-
-.gist-data {
-	max-height: 400px;
-	overflow-y:scroll;
 }
 
 #map-canvas {
