@@ -326,3 +326,7 @@ footer {
 	height: 0;
 	padding-bottom: 100%;
 }
+
+#profile-picture {
+	margin: 0 auto;
+}
