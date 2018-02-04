@@ -1,6 +1,94 @@
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   width: 100%;
+  font-family: 'Oswald', Arial, Verdana;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+}
+
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+
+  #bio {
+    width: 60%;
+  }
+
+  #profile-picture {
+    width: 40%;
+  }
+
+  #profile-picture, #bio {
+    float: left;
+  }
+
+  #top {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row:before {
+  display: table;
+  content: " ";
+}
+.row:after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+#bio, #profile-picture {
+  position: relative;
+  min-height: 1px;
+}
+
+#profile-picture > img {
+  vertical-align: middle;
+  border: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .content-section {
@@ -15,12 +103,12 @@ html, body {
 
 .content-section a {
   color: #e29839;
-
   -moz-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
   -ms-transition: color 0.5s ease;
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
+  text-decoration: none;
 }
 
 .content-section a:hover{
@@ -31,24 +119,27 @@ html, body {
 #top {
   padding-top:  250px;
   background-size: cover;
-  font-family: 'Oswald', Arial, Verdana;
-}
-
-@media (max-width: 992px) {
-  #top {
-    padding-top: 20px;
-  }
 }
 
 #top h1 {
   font-size: 60px;
   text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  margin: .67em 0;
 }
 
 #top h2 {
   font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
 }
 
-#profile-picture {
-  margin: 0 auto;
-}
