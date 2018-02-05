@@ -42,10 +42,6 @@ body {
   #profile-picture, #bio {
     float: left;
   }
-
-  #top {
-    padding-top: 20px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -91,17 +87,18 @@ body {
   margin-left: auto;
 }
 
-.content-section {
+#top {
+  background-size: cover;
   text-align: center;
-  height: auto !important;
-  min-height: 100%;
   overflow: hidden;
-  padding-top: 91px;
-  position: relative;
   background-color: white;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.content-section a {
+#top a {
   color: #e29839;
   -moz-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
@@ -111,14 +108,9 @@ body {
   text-decoration: none;
 }
 
-.content-section a:hover{
+#top a:hover{
   text-decoration: none;
   color: black;
-}
-
-#top {
-  padding-top:  250px;
-  background-size: cover;
 }
 
 #top h1 {
