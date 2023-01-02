@@ -1,58 +1,143 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="author" content="Gábor Döbrei">
-    <meta name="description" content="Node.js and graph enthusiast · Husband · co-organizer of @neo4jbp.">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="author" content="Gábor Döbrei">
+  <meta name="description" content="Node.js and graph enthusiast · Husband · co-organizer of @neo4jbp.">
 
-    <meta name="google-site-verification" content="fBrgMb8lNB8yyVwBrczArMn12sJR8a1tbID6psYpdKQ" />
+  <meta name="google-site-verification" content="fBrgMb8lNB8yyVwBrczArMn12sJR8a1tbID6psYpdKQ" />
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Gábor Döbrei">
-    <meta name="twitter:description" content="Node.js and graph enthusiast · Husband · co-organizer of @neo4jbp.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Gábor Döbrei">
+  <meta name="twitter:description" content="Node.js and graph enthusiast · Husband · co-organizer of @neo4jbp.">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Gábor Döbrei">
-    <meta property="og:description" content="Node.js and graph enthusiast · Husband · co-organizer of @neo4jbp.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Gábor Döbrei">
+  <meta property="og:description" content="Node.js and graph enthusiast · Husband · co-organizer of @neo4jbp.">
 
-    <meta name="twitter:site" content="@gabordobrei">
-    <meta name="twitter:creator" content="@gabordobrei">
-    <meta name="google-site-verification" content="">
-    <meta property="fb:admins" content="">
+  <meta name="twitter:site" content="@gabordobrei">
+  <meta name="twitter:creator" content="@gabordobrei">
+  <meta name="google-site-verification" content="">
+  <meta property="fb:admins" content="">
 
-    <link rel="icon" href="img/pepperlabs.png">
+  <link rel="icon" href="img/pepperlabs.png">
 
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mada:300,400,700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
 
-    <title>Gábor Döbrei</title>
+  <title>Gábor Döbrei</title>
 
-    <link href="img/pepperlabs.png" rel="shortcut icon" type="image/x-icon">
+  <link href="img/pepperlabs.png" rel="shortcut icon" type="image/x-icon">
 
-    <link href="css/style.css" rel="stylesheet">
-  </head>
+  <style>
+    :root {
+      --max-width: 720px;
+    }
 
-  <body id="page-top">
-    <section id="top" class="top-section content-section">
-      <div class="container">
-        <div class="row">
-          <div id="bio">
-            <h1>Gábor Döbrei</h1>
-            <h2><a href="https://twitter.com/gabordobrei" target="_blank">@gabordobrei</a></h2>
-            <h2><a href="https://hu.linkedin.com/in/gábor-döbrei-230a4368">Node.js</a> and <a href="https://github.com/gabordobrei/" target="_blank">graph enthusiast</a> · Husband · co-organizer of <a href="https://www.meetup.com/neo4j-budapest-users">@neo4jbp</a></h2>
-          </div>
+    @media screen and (min-width: 1920px) {
+      :root {
+        --max-width: 1200px;
+      }
+    }
 
-          <div id="profile-picture">
-            <img src="img/profile.jpg" class="img-responsive img-circle" alt="Profile pic">
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
+    html {
+      font-size: 12px;
+      height: -webkit-fill-available;
+    }
+
+    @media screen and (max-width: 800px) {
+      html {
+        font-size: 1ch;
+      }
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      font-family: 'Mada', 'Helvetica Neue', helvetica, arial, sans-serif;
+      margin: 0;
+
+      font-size: 2.32rem;
+      color: #1d2d35;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    a {
+      color: #1d2d35;
+      transition: all 0.2s ease;
+      transition-property: text-decoration-color, text-decoration-thickness;
+      text-decoration-thickness: 0.1rem;
+      vertical-align: baseline;
+    }
+
+    a:hover {
+      text-decoration-color: #ec3a3a;
+      text-decoration-thickness: 0.2rem;
+    }
+
+    header {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      height: 400px;
+      gap: 50px;
+    }
+
+    .bio {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bio-content {
+      text-align: center;
+    }
+
+    .profile {
+      display: flex;
+    }
+
+    img {
+      vertical-align: middle;
+      border: 0;
+      max-height: 120%;
+      display: block;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="bio">
+    <div class="bio-content">
+      <h1>Gábor Döbrei</h1>
+      <span>Husband and father, CEO @ <a href="https://pepperlabs.io">PepperLabs</a></span>
+
+      <p>
+        <a href="mailto:gabor@pepperlabs.io">email</a>
+        · <a href="https://twitter.com/gabordobrei">twitter</a>
+        · <a href="https://hu.linkedin.com/in/gábor-döbrei-230a4368">linkedin</a>
+        · <a href="https://github.com/gabordobrei/">github</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="profile">
+    <img src="img/profile.jpg" alt="Profile picture">
+  </div>
+</header>
+</body>
 </html>
